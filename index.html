@@ -1,150 +1,142 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Бесплатное жильё от государства | MyGov.uz</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оплата госпошлины</title>
   <style>
-    :root {
-      --primary: #0057b8;
-      --secondary: #f4f7fa;
-      --accent: #34b7f1;
-      --text: #1f2937;
-      --muted: #6b7280;
-    }
-
-    * {
-      box-sizing: border-box;
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, #e3f2fd, #ffffff);
       margin: 0;
       padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--secondary);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    .main-image {
-      width: 100%;
-      height: auto;
-      border-radius: 16px;
-      margin-bottom: 24px;
-    }
-
     .container {
-      max-width: 960px;
-      margin: 48px auto;
-      padding: 32px;
-      background: white;
-      border-radius: 24px;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+      background: #fff;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+      border-radius: 20px;
+      padding: 50px 30px;
+      width: 100%;
+      max-width: 440px;
+      text-align: center;
+      position: relative;
+      border-top: 6px solid #0057a3;
     }
-
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .header img {
+      width: 36px;
+      margin-right: 10px;
+    }
     h1 {
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 16px;
-    }
-
-    h2 {
       font-size: 24px;
-      font-weight: 600;
-      margin-top: 40px;
-      margin-bottom: 16px;
+      color: #00396b;
+      margin-bottom: 10px;
     }
-
-    h3 {
-      font-size: 18px;
-      font-weight: 600;
-      margin-top: 20px;
-    }
-
-    p, li {
+    p {
       font-size: 16px;
-      margin-bottom: 12px;
+      color: #333;
+      margin-bottom: 10px;
     }
-
-    ul {
-      padding-left: 20px;
+    .amount {
+      font-size: 20px;
+      font-weight: bold;
+      color: #d32f2f;
+      margin-bottom: 20px;
     }
-
-    .cta {
-      text-align: center;
-      margin: 40px 0;
-    }
-
-    .cta a {
-      display: inline-block;
-      background-color: var(--accent);
+    button {
+      margin-top: 20px;
+      padding: 14px 26px;
+      background-color: #0057a3;
       color: white;
-      padding: 16px 36px;
-      font-size: 18px;
-      font-weight: 600;
-      border-radius: 14px;
-      text-decoration: none;
-      box-shadow: 0 6px 20px rgba(52, 183, 241, 0.4);
-      transition: transform 0.2s ease, background-color 0.3s;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 87, 163, 0.3);
     }
-
-    .cta a:hover {
-      background-color: #1fa1dc;
-      transform: translateY(-2px);
+    button:hover {
+      background-color: #003f7d;
     }
-
-    footer {
-      text-align: center;
-      margin-top: 64px;
-      padding: 24px;
+    .hidden {
+      display: none;
+    }
+    .field {
+      background: #f3f6f9;
+      padding: 14px;
+      margin: 12px 0;
+      border-radius: 10px;
+      font-weight: bold;
+      color: #1c1c1c;
+      border: 1px solid #c7d5e0;
+      font-size: 16px;
+    }
+    .copy-btn {
+      background: transparent;
+      border: 1px solid #0057a3;
+      color: #0057a3;
+      margin-top: 5px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      cursor: pointer;
       font-size: 14px;
-      color: var(--muted);
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 13px;
+      color: #999;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="header">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Coat_of_arms_of_Uzbekistan.svg/50px-Coat_of_arms_of_Uzbekistan.svg.png" alt="Emblem">
+      <h1>Оплата госпошлины</h1>
+    </div>
+    <p>Для участия в программе необходимо внести:</p>
+    <div class="amount">321 000 сум</div>
+    <button onclick="showPayment()">Начать оплату</button>
 
-  <!-- Логотип -->
-  <img src="лого.png" alt="Жильё от государства" class="main-image" />
-
-  <main class="container">
-    <h1>Бесплатное жильё от государства — теперь это реально!</h1>
-    <img src="2025-04-23 23.47.14.jpg" alt="Жильё от государства" class="main-image" />
-    <p>Программа поддержки нуждающихся граждан Узбекистана уже действует. Проверьте своё право и получите ключи от новой квартиры с помощью цифровой платформы MyGov.uz.</p>
-    <ul>
-      <li>✅ Проверка занимает не более 2 минут</li>
-      <li>✅ Тысячи семей уже получили жильё</li>
-      <li>✅ Без очередей и взяток</li>
-    </ul>
-
-    <div class="cta">
-      <a href="https://t.me/your_bot">Проверить своё право на жильё</a>
+    <div id="paymentInfo" class="hidden">
+      <p>Переведите сумму на следующие реквизиты:</p>
+      <div class="field" id="cardNumber">5614 6816 2830 4747 (SQB)</div>
+      <button class="copy-btn" onclick="copyToClipboard('cardNumber')">📋 Скопировать реквизиты</button>
+      <div class="field">Получатель: Azizbek Kenjaev</div>
+      <p>После оплаты нажмите кнопку ниже:</p>
+      <a href="https://t.me/MyGov_manager" target="_blank">
+        <button>Я оплатил</button>
+      </a>
     </div>
 
-    <h2>Почему это безопасно и надёжно?</h2>
-    <ul>
-      <li>📌 Программа одобрена правительством</li>
-      <li>👨‍👩‍👧‍👦 Поддержка многодетных и малообеспеченных семей</li>
-      <li>🛡️ Гарантированная конфиденциальность</li>
-      <li>📍 Доступно по всей территории Узбекистана</li>
-    </ul>
+    <footer>
+      © 2025 Государственная жилищная программа «Жильё 2025»
+    </footer>
+  </div>
 
-    <h2>Часто задаваемые вопросы</h2>
-    <h3>Кто может получить жильё?</h3>
-    <p>Граждане, находящиеся в списках нуждающихся, зарегистрированные по месту жительства в Узбекистане.</p>
-
-    <h3>Это официальная программа?</h3>
-    <p>Да, на базе инициатив государственной цифровизации и поддержки населения.</p>
-
-    <h3>Это бесплатно?</h3>
-    <p>Да, проверка и подача заявки полностью бесплатны.</p>
-  </main>
-
-  <footer>
-    <p>© 2025 MyGov.uz · Все права защищены</p>
-    <p><a href="https://t.me/your_bot" style="color: var(--primary); text-decoration: underline; font-weight: 600;">Перейти в официальный Telegram-бот</a></p>
-  </footer>
+  <script>
+    function showPayment() {
+      document.getElementById('paymentInfo').classList.remove('hidden');
+    }
+    function copyToClipboard(id) {
+      const el = document.getElementById(id);
+      const range = document.createRange();
+      range.selectNode(el);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+      alert('Реквизиты скопированы');
+    }
+  </script>
 </body>
 </html>
